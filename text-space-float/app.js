@@ -1,39 +1,39 @@
 const DATA = {
   data: [
-    "JavaScript",
-    "TypeScript",
-    "ReactJs",
-    "Angular",
-    "AngularJS",
-    "D3.js",
-    "ChartJs",
-    "Bootstrap",
-    "Tailwind CSS",
-    "HTML",
-    "ISML",
-    "Git",
-    "LeafletJS",
-    "JQuery",
-    "Java",
-    "Spring Framework",
-    "Spring Boot",
-    "SFCC",
-    "Karma",
-    "Jasmine",
-    "SCSS",
-    "LESS",
-    "CSS",
-    "Handlebar Js",
-    "Firebase",
+    "JavaScript, ",
+    "TypeScript, ",
+    "ReactJs, ",
+    "Angular, ",
+    "AngularJS, ",
+    "D3.js, ",
+    "ChartJs, ",
+    "Bootstrap, ",
+    "Tailwind CSS, ",
+    "HTML, ",
+    "ISML, ",
+    "Git, ",
+    "LeafletJS, ",
+    "JQuery, ",
+    "Java, ",
+    "Spring Framework, ",
+    "Spring Boot, ",
+    "SFCC, ",
+    "Karma, ",
+    "Jasmine, ",
+    "SCSS, ",
+    "LESS, ",
+    "CSS, ",
+    "Handlebar Js, ",
+    "Firebase, ",
   ],
-  "start-transition-time": "5000",
-  "stop-transition-time": "500",
+  "start-transition-time": "50000",
+  "stop-transition-time": "1000",
   transition: "ease-out",
   "container-selector": ".section-text-container",
   classesArray: [],
-  colorsArray: ["#9b0000", "#7200ca", "#1b5e20", "#bc5100"],
-  minSize: "6",
-  maxSize: "30",
+  colorsArray: [],
+  minSize: "20",
+  maxSize: "20",
   rotation: false,
 };
 
@@ -81,7 +81,7 @@ function startTextAnimation() {
 
 function stopTextAnimation() {
   clearInterval(interval);
-  textValuesContainer.map((element) => moveTextOrigionalPosition(element));
+  textValuesContainer.map((element) => moveTextOriginalPosition(element));
 }
 
 function moveTextRandomPosition(element, index) {
@@ -97,7 +97,7 @@ function moveTextRandomPosition(element, index) {
   element.style.left = ELEMENT_X + "px";
 }
 
-function moveTextOrigionalPosition(element) {
+function moveTextOriginalPosition(element) {
   element.style.transition =
     DATA["stop-transition-time"] + "ms " + DATA.transition;
   element.style.top = 0;
@@ -158,12 +158,3 @@ function getRandomNumberInRange(startLimit = 0, endLimit = 0) {
     5. convert js into ts
     6. convert into package
 */
-
-$(document).ready(function () {
-  $(".autoplay").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  });
-});
